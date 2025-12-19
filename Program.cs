@@ -5,6 +5,7 @@ internal static class Program
     private static void Main()
     {
         var b = new BellmanFord();
+        var d = new DijkstraS();
     }
 }
 /*

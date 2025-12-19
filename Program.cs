@@ -4,25 +4,7 @@ internal static class Program
 {
     private static void Main()
     {
-        var first = Console.ReadLine()!.Split();
-        var n = int.Parse(first[0]);
-        var edges = new Edge[n];
-        var front = new int[n];
-
-        // 初始化 front 陣列為 0
-        Array.Fill(front, 0);
-
-        for (var i = 0; i < int.Parse(first[1]); i++)
-        {
-            var parts = Console.ReadLine()!.Split();
-            var u = int.Parse(parts[0]);
-            edges[i].V = int.Parse(parts[1]);
-            edges[i].W = int.Parse(parts[2]);
-            edges[i].Next = front[u];
-            front[u] = i;
-        }
-
-        BellmanFord.Start(edges, front, n, int.Parse(first[2]));
+        var b = new BellmanFord();
     }
 }
 /*
